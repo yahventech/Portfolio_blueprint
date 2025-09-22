@@ -116,7 +116,7 @@ const Hero = () => {
               
               {/* Profile Image inside Glow */}
               <motion.img 
-                src="/assets/profile.png"   // put image in public/assets
+                src="/profile.png"   // put image in public/assets
                 alt="Profile"
                 className="hero-image"
                 initial={{ opacity: 0, scale: 0.8 }}

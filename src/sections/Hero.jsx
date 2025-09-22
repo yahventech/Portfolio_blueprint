@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Typed from 'react-typed';
 import { FaGithub, FaLinkedin, FaEnvelope, FaArrowDown } from 'react-icons/fa';
 import '../styles/Hero.css';
+import profileImg './profile.png'
 
 const Hero = () => {
   const scrollToNext = () => {
@@ -116,7 +117,7 @@ const Hero = () => {
               
               {/* Profile Image inside Glow */}
               <motion.img 
-                src="/profile.png"   // put image in public/assets
+                src={profileImg}   // put image in public/assets
                 alt="Profile"
                 className="hero-image"
                 initial={{ opacity: 0, scale: 0.8 }}

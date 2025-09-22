@@ -7,6 +7,18 @@
   overflow: hidden;
 }
 
+.hero-image {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(0, 255, 136, 0.6);
+  box-shadow: 0 0 25px rgba(0, 255, 136, 0.7);
+  z-index: 2;
+}
+
+
 .hero-background {
   position: absolute;
   top: 0;

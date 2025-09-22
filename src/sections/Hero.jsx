@@ -12,6 +12,7 @@ const Hero = () => {
 
   return (
     <section id="home" className="hero">
+      {/* Background glow + shapes */}
       <div className="hero-background">
         <div className="floating-shapes">
           <div className="shape shape-1"></div>
@@ -19,9 +20,10 @@ const Hero = () => {
           <div className="shape shape-3"></div>
         </div>
       </div>
-      
+
       <div className="container">
         <div className="hero-content">
+          {/* Text section */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -39,7 +41,7 @@ const Hero = () => {
                 className="typed-text"
               />
             </motion.h1>
-            
+
             <motion.p 
               className="hero-subtitle"
               initial={{ opacity: 0, y: 30 }}
@@ -51,6 +53,7 @@ const Hero = () => {
               <span className="highlight"> penetration testing</span>
             </motion.p>
 
+            {/* Buttons */}
             <motion.div 
               className="hero-buttons"
               initial={{ opacity: 0, y: 30 }}
@@ -75,6 +78,7 @@ const Hero = () => {
               </motion.a>
             </motion.div>
 
+            {/* Social Links */}
             <motion.div 
               className="social-links"
               initial={{ opacity: 0 }}
@@ -85,7 +89,7 @@ const Hero = () => {
                 { icon: FaGithub, href: "https://github.com", label: "GitHub" },
                 { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
                 { icon: FaEnvelope, href: "mailto:contact@example.com", label: "Email" }
-              ].map((social, index) => (
+              ].map((social) => (
                 <motion.a
                   key={social.label}
                   href={social.href}
@@ -100,6 +104,7 @@ const Hero = () => {
             </motion.div>
           </motion.div>
 
+          {/* Visual Section with Glow + Image */}
           <motion.div 
             className="hero-visual"
             initial={{ opacity: 0, x: 50 }}
@@ -108,20 +113,30 @@ const Hero = () => {
           >
             <div className="cyber-card">
               <div className="card-glow"></div>
+              
+              {/* Profile Image inside Glow */}
+              <motion.img 
+                src="/assets/profile.png"   // put image in public/assets
+                alt="Profile"
+                className="hero-image"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1, delay: 0.3 }}
+              />
+
+              {/* Optional holographic animation behind */}
               <div className="holographic-display">
                 <div className="data-stream">
                   <div className="data-point"></div>
                   <div className="data-point"></div>
                   <div className="data-point"></div>
                 </div>
-                <div className="security-shield">
-                  <div className="shield-core"></div>
-                </div>
               </div>
             </div>
           </motion.div>
         </div>
 
+        {/* Scroll indicator */}
         <motion.div 
           className="scroll-indicator"
           initial={{ opacity: 0 }}
